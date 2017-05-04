@@ -14,7 +14,7 @@
         <!-- Branding Image -->
         <a class="brand-image" href="{{ url('/') }}">
                   {{-- {{ config('app.name', 'Laravel') }} --}}
-                <img src="storage/pages/logo.png" alt="">
+                <img src="storage/logo.png" alt="">
               </a>
       </div>
 
@@ -26,9 +26,9 @@
 
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li><a href="{{ url('/homepage') }}">HOME</a></li>
+           <li><a href="{{ url('/homepage') }}">HOME</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" >CATEGORIES</a>
+            <a class="dropdown-toggle" data-toggle="dropdown" >CATEGORIES<span class="caret"></span></a>
                <ul class="dropdown-menu">
               <li><a href="#">DOCTORS</a></li>
               <li><a href="#">HOSPTALS</a></li>
@@ -42,7 +42,7 @@
           <li><a href="{{url('/blogs')}}">BLOG</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="{{ url('/packages') }}">PACKAGAES</a></li>
-          <li><a href="{{ url('/contact_us') }}">CONTACT US</a></li> -->
+          <li><a href="{{ url('/contact') }}">CONTACT US</a></li>
         <?= menu('nav','bootstrap'); ?>
 
           @if (Auth::guest())
@@ -55,6 +55,10 @@
                           </a>
 
             <ul class="dropdown-menu" role="menu">
+                <li>
+                <li><a href="{{ url('/profile') }}">PROFILE</a></li>
+
+                </li>
               <li>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
@@ -65,6 +69,7 @@
                   {{ csrf_field() }}
                 </form>
               </li>
+
             </ul>
           </li>
           @endif

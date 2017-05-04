@@ -12,14 +12,16 @@
             </div>
           </div>
           <div class="col-sm-7">
-            <form class="doc-formtheme doc-formnewsletter">
+
+            <div class="doc-formtheme doc-formnewsletter">
+            {!! Form::open(['url' => '','class'=>'']) !!}
               <fieldset>
-                <div class="form-group">
-                  <input name="email" class="form-control" placeholder="Enter Email Here" type="email">
-                </div>
-                <a class="doc-btnsubscribe subscribe_me" href="javascript:;"><i class="fa fa-paper-plane"></i></a>
+            {!! Form::text('email', null,array('class'=>'form-control','placeholder'=>'Enter Email Here')) !!}
+            {!! Form::submit('',array('class'=>'doc-btnsubscribe fa')) !!}
               </fieldset>
-            </form>
+            {!! Form::close() !!}
+            </div>
+
           </div>
         </div>
       </div>

@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/blog', 'BlogController@index')->name('blog');
+Route::get('/contact', 'PagesController@Contact')->name('contact-us');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
