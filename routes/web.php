@@ -11,17 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'PagesController@index')->name('home');
 
 
 Route::get('/blog', 'BlogController@index')->name('blog');
+Route::get('/blog/{id}','BlogController@show')->name('article');
 Route::get('/contact', 'PagesController@Contact')->name('contact-us');
+Route::get('/packages', 'PagesController@Packages')->name('packages');
+Route::get('/profile', 'PagesController@Profile')->name('profile');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+/*API*/
+
+Route::get('/api/blog', 'BlogController@all')->name('blog');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -169,6 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,6 +230,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+
     ],
 
 ];

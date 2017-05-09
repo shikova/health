@@ -91,7 +91,8 @@ body {
 #confirmBox .button:hover,
 .docdirect-loader > div,
 .doc-topbar.doc-topbar-v1,
-.doc-header .doc-topbar {
+.doc-header .doc-topbar ,
+#contact-send:hover{
     background: #3498db;
 }
 
@@ -239,6 +240,10 @@ p a,
     color: #3498db !important;
 }
 
+.contact_now:hover{
+    color: #3498db !important;
+
+}
 .tg-btn,
 .tg-nav ul li ul,
 .tg-theme-heading .tg-roundbox,

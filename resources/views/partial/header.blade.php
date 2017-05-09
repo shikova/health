@@ -26,7 +26,7 @@
 
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">
-           <li><a href="{{ url('/homepage') }}">HOME</a></li>
+           <li><a href="{{ url('/') }}">HOME</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" >CATEGORIES<span class="caret"></span></a>
                <ul class="dropdown-menu">
@@ -39,7 +39,7 @@
               <li><a href="#">FITNESS CENTERS</a></li>
             </ul>
           </li>
-          <li><a href="{{url('/blogs')}}">BLOG</a></li>
+          <li><a href="{{url('/blog')}}">BLOG</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="{{ url('/packages') }}">PACKAGAES</a></li>
           <li><a href="{{ url('/contact') }}">CONTACT US</a></li>
